@@ -16,8 +16,8 @@ export default class Dashboard extends Component {
     // this.dataFetcher = new DataFetcher('//amar2000.azurewebsites.net/api/climate');
     // this.dataSyncer = new DataSyncer('//amar2000.azurewebsites.net/signalr/hubs');
 
-    this.dataFetcher = new DataFetcher('//test-amar2000.azurewebsites.net/api/climate');
-    this.dataSyncer = new DataSyncer('//test-amar2000.azurewebsites.net/signalr/hubs');
+    this.dataFetcher = new DataFetcher('//amar2000.localhost.efocus.local/api/climate');
+    this.dataSyncer = new DataSyncer('//amar2000.localhost.efocus.local/signalr/hubs');
 
 
     this.state = {

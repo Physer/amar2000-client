@@ -8,29 +8,29 @@ module.exports = {
   },
   devtool: 'source-map',
   output: {
-    path: path.resolve(path.dirname(), 'build'),
+    path: path.resolve(__dirname, 'build'),
     filename: '[name].js',
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.scss', '.css'],
+    extensions: ['.js', '.jsx', '.scss', '.css'],
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js|jsx?$/,
         exclude: /(node_modules)/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react'],
         },
       },
       {
         test: /\.scss$/,
-        loader: 'style!css!sass',
+        loader: 'style-loader!css-loader!sass-loader',
       },
       {
         test: /\.css$/,
-        loader: 'style!css?',
+        loader: 'style-loader!css-loader?',
       },
     ],
   },
